@@ -119,7 +119,7 @@ public class RemoteLRS implements LRS {
         );
     }
 
-    private HTTPResponse sendRequest(HTTPRequest request) throws Exception {
+    public HTTPResponse sendRequest(HTTPRequest request) throws Exception {
         request.setRequestHeader("Authorization", this.getAuth());
         request.setRequestHeader("X-Experience-API-Version", this.getVersion().toString());
         request.setRequestContentType("application/json");
